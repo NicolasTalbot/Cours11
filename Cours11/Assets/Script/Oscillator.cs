@@ -21,9 +21,9 @@ public class Oscillator : MonoBehaviour {
             return;
         }
         float cycles = Time.time / period;
-        const float tau = Mathf.PI * 2;
-        float rawSinWave = Mathf.Sin(cycles * tau);
-        Vector3 offset = movementVector * rawSinWave;
+        const float taux = Mathf.PI * 2;
+        float rawSinWave = Mathf.Sin(cycles * taux);
+        Vector3 offset = rawSinWave * movementVector;
         transform.position = startingPos + offset;
 	}
 }
